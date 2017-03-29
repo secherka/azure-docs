@@ -493,6 +493,7 @@ When such a request comes, the on-premises federation service must authenticate 
     http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows
     http://schemas.microsoft.com/claims/wiaormultiauthn
 
+
 In AD FS, you must add an issuance transform rule that passes-through the authentication method.  
 
 **To add this rule:**
@@ -524,6 +525,8 @@ When you have completed the required steps, domain-joined devices are ready to a
 ### Remarks
 
 - You can use a Group Policy object to control the rollout of automatic registration of Windows 10 and Windows Server 2016 domain-joined computers.
+
+- For the Windows versions newer then Windows 10 November 2015 Update, Group Policy settings mentioned below are not required. The device registration will work automatically after you completed Steps 1-3.
 
 - Windows 10 November 2015 Update automatically registers with Azure AD **only** if the rollout Group Policy object is set.
 
